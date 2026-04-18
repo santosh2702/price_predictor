@@ -40,11 +40,10 @@ def train_model():
         ('regressor', RandomForestRegressor(n_estimators=100, random_state=42))
     ])
     
-    # Train on all data (since it's synthetic, no separate test needed)
     model.fit(X, y)
     return model
 
-# Load the model (cached)
+# Load or train the model (cached)
 model = train_model()
 
 # UI
